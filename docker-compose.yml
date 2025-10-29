@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  oblivc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: oblivc-builder
+    working_dir: /obliv-c
+    command: bash -lc "eval $(opam env) && ./configure && make -j$(nproc)"
+    volumes:
+      - ./output:/obliv-c
+    environment:
+      - OBLIVC_PATH=/obliv-c
+    tty: true

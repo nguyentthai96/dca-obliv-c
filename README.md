@@ -17,7 +17,7 @@ Unfortunately, the instructions for Fedora and Mac OS might be a little out of d
    opam init
    opam switch 4.06.0
    eval `opam config env`
-   opam install camlp4 ocamlfind ocamlbuild batteries
+   opam install camlp4 ocamlfind ocamlbuild batteries num
    ```
    Version 4.06.0 just happened to be the most recent version when we tested. You can check what you have by running `opam switch list`, and try a more recent one.
    Note that this step seems to be unnecessary under Fedora.
